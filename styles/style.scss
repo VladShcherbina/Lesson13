@@ -334,6 +334,7 @@ text-transform: uppercase;
 .travel_h2{
     @include RobotoSlab(56px, normal, 700);
     color: $white;
+    text-transform: uppercase;
 }
 .travel_svg{
     display: flex;
