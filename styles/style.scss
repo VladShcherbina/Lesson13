@@ -1,0 +1,424 @@
+@import './mixins.scss';
+@import './variables.scss';
+@import './icons.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Lora:wght@700&family=Quicksand:wght@400;500;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+*{
+    text-decoration: none;
+    list-style-type: none;
+    color: $black;
+    margin: 0;
+    // padding: 0;
+}
+
+.bg-1{
+    background: no-repeat url('../imgs/derek-thomson-TWoL-QCZubY-unsplash\ 4.jpg');
+    background-size: 100%;
+    // padding: 0 0 30px 0;
+    height: 964px;
+}
+
+.menu{
+    padding: 30px 0;
+    @include flex(center, space-around, 0, row);
+    // padding: 35px 150px 35px 150px;
+}
+
+.header{
+    background-color: $black0pasity;
+&__name{
+    color: $white;
+}
+
+&__nav{
+    li{
+        color: $white;
+    } 
+}
+
+&__social{
+    span{
+        color: $white;
+    }
+}
+}
+
+.name{
+    @include RobotoSlab(32px, 32px, 700);
+}
+
+.nav{
+    menu{ 
+    @include flex(center, center, 45px, row);
+}
+&__link{
+    @include Lato(22px, 26px, 500);
+}
+}
+
+.langBar{
+    @include flex(center, center, 5px, row);
+    svg{
+        fill: $white;
+    }
+}
+
+.social{
+    menu{
+        @include flex(center, center, 20px, row);
+    }
+
+    &__link{
+        font-size: 24px;
+    }
+}
+
+.bg-2{
+    background-color: $black0pasity;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 200px 280px 200px 297px;
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 31px 48px 50px;
+    text-align:center
+}
+
+.time_title{
+    @include Lora(84px, 100px, 700);
+    color: $white;
+    text-transform: uppercase;
+    width: 80%
+}
+
+.time_p{
+    @include Lato(24px, normal, 400);
+    color: $white;
+}
+
+.time_btn{
+   width: 316px;
+   height: 61px;
+   background-color: $green;
+   @include Lato(16px, normal, 900);
+   text-transform: uppercase;
+   color: $white;
+}
+.about_bos{
+    display: flex;
+    flex-direction: column;
+    gap: 153px;
+    padding: 144px 141px 100px 141px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px ;
+    
+    &-title{
+        @include RobotoSlab(56px, 74px, 700);
+        text-transform: uppercase;    
+    }
+    &-text{
+        @include Quicksand(20px, 32px, 500); 
+       width: 70%;
+       color: #333;
+    }
+}
+.cards_bos{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    gap: 25px;
+}
+.cards-text{
+    @include Quicksand(40px, 32px, 400); 
+}
+
+.card-svg{
+    position: relative;
+&::before{
+    position: absolute;
+    z-index: -1;
+color: $green;
+@include RobotoSlab(144px, normal, 700);
+text-transform: uppercase;
+}
+}
+.svg1{
+    &::before{
+    content: '4670';
+    top: -70px;
+    left: -80px;
+    }
+}
+.svg2{
+    &::before{
+        content: '65%';
+        top: -70px;
+        left: -20px;
+    }  
+}
+.svg3{
+    &::before{
+        content: '148';
+        top: -70px;
+        left: -40px;
+    } 
+}
+.svg4{
+    &::before{
+        content: '11';
+        top: -70px;
+    }
+}
+
+.trip_bg{
+    background: no-repeat url(../imgs/ken-cheung-VbLTNceBTFE-unsplash\ 1.jpg);
+    background-size: 100%;
+}
+.trip{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+   text-align: center;
+   gap: 30px;
+   padding: 50px 50px 106px;
+}
+.trip_p{
+    @include RobotoSlab(56px, normal, 700);
+    color: $white;
+    text-transform: uppercase;
+}
+.trip_h2{
+    @include RobotoSlab(144px, 144px, 700);
+    color: $white;
+    text-transform: uppercase;
+}
+.trip_p2{
+    @include Quicksand(24px, 18px, 500);
+    color: $white;
+}
+.trip_p3{
+    @include Quicksand(24px, 32px, 400);
+    color: $white;
+    width: 60%;
+}
+.polos{
+    background-color: $white;
+    height: 1px;
+    width: 30%
+}
+.trip_p4{
+    @include Quicksand(28px, 32px, 500);
+    color: $white;
+    text-transform: uppercase;
+}
+.trip_btn{
+    @include Quicksand(20px, 18px, 700);
+    width: 236px;
+    height: 56px;
+    background-color: $green;
+    color: $white;
+}
+.popular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 124px 150px 72px 150px;
+}
+.popular_h2{
+    @include RobotoSlab(56px, normal, 700);
+    color: #333;
+    text-transform: uppercase;
+}
+.img{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.img_lii1{
+    background: no-repeat url(../imgs/dmitry-goykolov-X8Vo9rGVPS8-unsplash\ 1.png);
+    width: 513px;
+    height: 342px;
+    position: relative;
+}
+.img_lii2{
+    background: no-repeat url(../imgs/michelle-tsang-l0aeuaECCNA-unsplash\ 1.png);
+    width: 513px;
+    height: 342px;
+    position: relative;
+}
+.img_lii3{
+    background: no-repeat url(../imgs/christoph-schulz-wJ6xyh1YMxU-unsplash\ 1.png);
+    width: 513px;
+    height: 342px;
+    position: relative;
+}
+.img_li1{
+    @include RobotoSlab(18px, 18px, 400);
+    color: $white;
+    background: $black;
+    display: inline;
+    position:absolute;
+    top:10px
+   
+   }
+   .img_li2{
+    @include RobotoSlab(18px, 18px, 400);
+    color: $white;
+    background: $black;
+    display: inline;
+    position:absolute;
+    top:10px
+   }
+   .img_li3{
+    @include RobotoSlab(18px, 18px, 400);
+    color: $white;
+    background: $black;
+    display: inline;
+    position:absolute;
+    top:10px
+   }
+
+.popular_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.popular_btn{
+    width: 236px;
+    height: 56px;
+    background-color: $green;
+    color: $white;
+    @include Quicksand(20px, 18px, 700);
+    border: none;
+}
+.popular_inst{
+    @include Quicksand(14px, 18px, 500);
+    color: #333;
+}
+
+.bg-3{
+    background: no-repeat url(../imgs/bg-3.svg);
+    background-size: 100%;
+    height: 560px;
+}
+
+.travel{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 32px;
+    padding: 48px 150px 64px 150px;
+}
+
+.travel_h2{
+    @include RobotoSlab(56px, normal, 700);
+    color: $white;
+}
+.travel_svg{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.travel_img1{
+    background: no-repeat url(../imgs/1.png);
+    width: 441px;
+    height: 294px;
+    position: relative;
+}
+.travel_img2{
+    background: no-repeat url(../imgs/2.png);
+    width: 514px;
+    height: 342px;
+    position: relative;
+}
+.travel_img3{
+    background: no-repeat url(../imgs/3.png);
+    width: 441px;
+    height: 294px;
+    position: relative;
+}
+.travel_img_p1{
+@include Lato(14px, normal, 500);
+color: $white;
+background-color: $black;
+display: inline;
+position: absolute;
+top: 10px;
+left: 10px;
+}
+.travel_img_p2{
+    @include Lato(14px, normal, 500);
+    color: $white;
+    background-color: $black;
+    display: inline;
+    position: absolute;
+top: 10px;
+left: 10px;
+}
+.travel_img_p3{
+    @include Lato(14px, normal, 500);
+    color: $white;
+    background-color: $black;
+    display: inline;
+    position: absolute;
+top: 10px;
+left: 10px;
+}
+.travel_img_svg1{
+position: absolute;
+top: 120px;
+left: 190px;
+}
+.travel_img_svg2{
+    position: absolute;
+    top: 150px;
+    left: 240px;
+}
+.travel_img_svg3{
+    position: absolute;
+    top: 120px;
+    left: 190px;
+}
+.footer{
+    background: no-repeat url(../imgs/imgMountains\ 1.jpg);
+    background-size: 100%;
+    min-height: 100px ;
+&__name{
+    color: $black;
+}
+
+&__nav{
+    li{
+        color: $black;
+    } 
+}
+
+&__social{
+    span{
+        color: $black;
+    }
+}
+}
